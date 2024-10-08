@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>77.uz</title>
+    <link rel="icon" href="images/images/favicon/+page.svg">
+    <meta property="title" content="77.uz">
+    <meta name="description"
+          content="77.uz - ваш лучший партнер для продажи товаров и услуг. Создайте свое объявление прямо сейчас и расширьте вашу аудиторию.">
+    <meta property="og:title" content="77.uz">
+    <meta property="og:description"
+          content="77.uz - ваш лучший партнер для продажи товаров и услуг. Создайте свое объявление прямо сейчас и расширьте вашу аудиторию.">
+    <meta name="twitter:title" content="77.uz">
+    <meta name="twitter:description"
+          content="77.uz - ваш лучший партнер для продажи товаров и услуг. Создайте свое объявление прямо сейчас и расширьте вашу аудиторию.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@ijtimoiysayt">
+    <meta property="og:image" content="images/images/og-image/og-image.svg">
+    <meta property="twitter:image" content="images/images/og-image/og-image.svg">
+
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./icons/style.css">
+</head>
+<body class="bg-mainBack relative">
+
+<!-- Header -->
+<header class="border-b border-grey_4 bg-head_bg backdrop-blur-lg w-full px-[30px] h-20 flex ">
+    <div class="container mx-auto inline-flex justify-between items-center relative">
+        <nav>
+            <ul class="inline-flex gap-x-6 items-center justify-between">
+                <li>
+                    <div class="relative inline-block text-left">
+                        <!-- Button -->
+                        <button id="languageBtn"
+                                class="inline-flex items-center justify-center px-4 py-2 bg-white text-gray-700 w-[170px] max-sm:w-auto max-[500px]:float-left">
+                            <img id="selectedFlag" src="./images/icons/header/uz.svg" alt="Flag"
+                                 class="w-5 h-5 mr-2 inline-block">
+                            <span id="selectedLang" class="max-md:hidden block">O'zbekcha</span>
+                            <span id="selectedLang" class="max-md:block hidden">O'z</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none">
+                                <path d="M16.7998 9.5999L11.9998 14.3999L7.19981 9.5999" stroke="black" stroke-width="2"
+                                      stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+
+                        <!-- Dropdown Menu -->
+                        <div id="dropdown"
+                             class="hidden absolute ml-7 pl-4 flex-col justify-center items-end rounded-lg bg-white border border-7xl max-md:pl-4">
+                            <div>
+                                <a href="#" data-lang="Русский" data-flag="./images/icons/header/ru.svg"
+                                   class="inline-flex items-center gap-2 text-gray-700 max-md:pr-[10px] pr-[45px] py-[11px]">
+                                    <img src="./images/icons/header/ru.svg" alt="Russian Flag" class="w-5 h-5">
+                                    <span class="max-md:hidden block">Русский</span>
+                                    <span class="max-md:block hidden">Ру</span>
+                                </a>
+                                <div class="w-[103px] h-[1px] bg-[#F0F3F7] rounded absolute right-0"></div>
+                                <a href="#" data-lang="O'zbekcha" data-flag="./images/icons/header/uz.svg"
+                                   class="inline-flex items-center gap-2 text-gray-700 max-md:pr-[10px] pr-[45px] py-[11px]">
+                                    <img src="./images/icons/header/uz.svg" alt="Uzbek Flag" class="w-5 h-5">
+                                    <span class="max-md:hidden block">O'zbekcha</span>
+                                    <span class="max-md:block hidden">O'z</span>
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+                <li>
+                    <a href="tel:+998712007007" class="text-[#16191D] text-sm font-medium inline-flex gap-1 max-lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M17.2197 15.6425C17.2197 15.6425 16.2541 16.5908 16.0175 16.8688C15.6321 17.2802 15.1779 17.4744 14.5825 17.4744C14.5253 17.4744 14.4642 17.4744 14.407 17.4706C13.2735 17.3982 12.2202 16.9564 11.4302 16.5794C9.27009 15.5358 7.37333 14.0543 5.79715 12.1766C4.49576 10.6113 3.62561 9.16401 3.04933 7.61009C2.69441 6.66175 2.56465 5.92288 2.6219 5.2259C2.66006 4.78029 2.8318 4.41085 3.14856 4.09474L4.44996 2.796C4.63696 2.6208 4.83542 2.52559 5.03005 2.52559C5.27049 2.52559 5.46513 2.67032 5.58725 2.79219C5.59107 2.796 5.59488 2.79981 5.5987 2.80362C5.8315 3.02071 6.05285 3.24542 6.28565 3.48536C6.40396 3.60724 6.52609 3.72911 6.64821 3.8548L7.6901 4.89455C8.09464 5.29826 8.09464 5.67151 7.6901 6.07522C7.57942 6.18567 7.47256 6.29612 7.36188 6.40276C7.0413 6.7303 7.29314 6.47898 6.96111 6.77605C6.95348 6.78367 6.94584 6.78748 6.94203 6.7951C6.61382 7.12264 6.67488 7.44256 6.74357 7.65965C6.74739 7.67108 6.75121 7.68251 6.75502 7.69393C7.02599 8.34901 7.40763 8.96601 7.98772 9.70107L7.99154 9.70488C9.04487 10.9998 10.1554 12.0091 11.3805 12.7822C11.537 12.8813 11.6973 12.9612 11.8499 13.0374C11.9873 13.106 12.1171 13.1707 12.2278 13.2393C12.243 13.2469 12.2583 13.2583 12.2736 13.2659C12.4033 13.3307 12.5254 13.3612 12.6514 13.3612C12.9681 13.3612 13.1666 13.1631 13.2315 13.0984L13.9795 12.3518C14.1093 12.2223 14.3154 12.0662 14.5558 12.0662C14.7924 12.0662 14.9871 12.2147 15.1054 12.3442C15.1092 12.348 15.1092 12.348 15.113 12.3518L17.2159 14.4504C17.609 14.8388 17.2197 15.6425 17.2197 15.6425Z"
+                                  stroke="#B8BBBD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        +998 71 200 70 07
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <a href="index.html"
+           class="flex w-[170px] h-[100px] p-[14px_16px]  justify-center items-center rounded-b-[20px] border-x border-b border-grey_4 bg-white shadow-3xl absolute left-[50%] translate-x-[-50%]">
+            <img src="images/images/logo.svg"  alt="">
+        </a>
+        <nav>
+            <ul class="inline-flex items-center">
+                <li>
+                    <a href="" class="flex items-center gap-2 text-sm font-semibold text-mainBlack">
+                        <img src="./images/icons/header/heart.svg" alt="">
+                        <span class="max-md:hidden">Избранные</span>
+                    </a>
+                </li>
+                <div class="h-8 w-[1px] bg-[#F0F3F7] mx-4"></div>
+                <li>
+                    <button class="flex items-center justify-center py-2.5 px-6 gap-2 rounded-lg bg-[#F0F3F7]">
+                        <span class="max-md:hidden">Войти</span>
+                        <img src="./images/icons/header/login.svg" alt="">
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="bg-white text-center pb-10 mx-auto mt-24 max-w-[1379px] max-2xl:w-full">
+        <div class="container bg-white mx-auto">
+            <form class="flex  mx-auto w-[580px] h-[60px] max-md:w-10/12 justify-between items-center rounded-lg border border-inputCard gap-2 relative -top-[35px] bg-white p-2 group z-20">
+                <label for="search" class="flex gap-2 w-full">
+                    <img src="images/icons/main/search.svg" alt="search_icon" class="cursor-pointer">
+                    <input type="search" name="search" id="search" placeholder="Что вы ищите?"
+                           class="focus:outline-0 w-full">
+                </label>
+                <button class="inline-flex h-11 py-3 px-7 justify-center items-center gap-2 rounded-md bg-primaryText text-white ">
+                    Поиск
+                </button>
+            </form>
+
+            <!-- Modal -->
+            <div class="modal hidden" id="modal"></div>
+
+            <h2 class="text-primaryText text-[32px] font-extrabold leading-[130%] text-center">Категории</h2>
+            <p class="text-secondaryText text-base font-normal text-center mt-2">Вы можете найти все категории, которые
+                вам нужны от покупателя</p>
+
+            <!--   Cards   -->
+            <div class="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-x-[72px] max-sm:px-4 max-sm:pl-8 gap-y-5 mt-10 pl-6" id="categories">
+
+            </div>
+
+            <div class="grid grid-cols-3">
+
+            </div>
+        </div>
+    </section>
+
+    <!--  Объявления  -->
+    <section class="mt-16 pb-5">
+        <div class="container mx-auto">
+            <h2 class="text-primaryText text-[32px] font-extrabold leading-[130%] text-center">Объявления</h2>
+            <p class="text-secondaryText text-base font-normal text-center mt-2">Вы можете найти все категории, которые
+                вам нужны от покупателя</p>
+
+
+            <!--   Cards   -->
+            <div class="grid grid-cols-4 max-lg:grid-cols-3 max-md:px-4 max-md:grid-cols-2  max-sm:grid-cols-1 gap-x-6 gap-y-5 mt-10 pl-6" id="products">
+
+            </div>
+
+
+            <button class="flex py-3 px-7 justify-center items-center mx-auto w-[260px] mt-10 overflow-hidden btn group">Загрузить
+                больше
+                <svg class="relative ml-5 -top-14 group-hover:top-0 transition-all duration-300" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 21 21" fill="none">
+                    <path d="M14.5 11.5L10.5 15.5L6.5 11.5M14.5 5.5L10.5 9.5L6.5 5.5" stroke="#16191D" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <svg class="relative -ml-5 group-hover:translate-y-8 transition-all duration-200" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 21 21" fill="none">
+                    <path d="M14.5 11.5L10.5 15.5L6.5 11.5M14.5 5.5L10.5 9.5L6.5 5.5" stroke="#16191D" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </section>
+
+</main>
+
+<footer class="h-[203px] mt-[72px]">
+    <div class="container mx-auto">
+        <img  class="relative cursor-pointer left-[50%] translate-x-[-50%] -top-14 bottom-0" src="images/images/footer/logo.svg" alt="">
+        <p class="text-black text-center text-base max-md:text-sm max-md:w-5/12 max-md:line-clamp-4 -mt-16 w-2/3 mx-auto">77.uz marketplace - это виртуальная платформа в Узбекистане, которая облегчает покупки и продажи, связывая продавцов с потенциальными клиентами. </p>
+
+        <div class="flex justify-center flex-nowrap max-md:flex-wrap items-center mt-5 gap-[72px] w-full">
+            <div class="flex justify-center items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <g clip-path="url(#clip0_256_1535)">
+                        <path d="M-3.5 -4H15.5V0.562022H15.1219C7.19448 0.773098 0.828572 7.60334 0.827301 15.9975H-3.5C-3.5 10.6965 -1.49636 5.60664 2.06435 1.85648C2.49739 1.4004 2.94932 0.96864 3.41821 0.562022H-3.5V-4Z" fill="#388FF3"/>
+                        <path d="M0.827301 15.9975V16L0.829688 15.9975H0.827301Z" fill="#388FF3"/>
+                        <path d="M6.99847 16H2.5C2.5 12.5531 3.97623 9.24578 6.60123 6.80828C9.22623 4.37078 12.788 3 16.5 3V7.17715C11.2527 7.17715 6.99847 11.1275 6.99847 16Z" fill="#388FF3" fill-opacity="0.64"/>
+                        <path d="M16.5 17H8.5C8.5 14.88 9.34414 12.8437 10.8423 11.3423C12.3405 9.84092 14.38 9 16.5 9V17Z" fill="#388FF3" fill-opacity="0.48"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_256_1535">
+                            <rect width="16" height="16" rx="8" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                Доска объявлений
+            </div>
+            <div class="flex justify-center items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <g clip-path="url(#clip0_256_1535)">
+                        <path d="M-3.5 -4H15.5V0.562022H15.1219C7.19448 0.773098 0.828572 7.60334 0.827301 15.9975H-3.5C-3.5 10.6965 -1.49636 5.60664 2.06435 1.85648C2.49739 1.4004 2.94932 0.96864 3.41821 0.562022H-3.5V-4Z" fill="#388FF3"/>
+                        <path d="M0.827301 15.9975V16L0.829688 15.9975H0.827301Z" fill="#388FF3"/>
+                        <path d="M6.99847 16H2.5C2.5 12.5531 3.97623 9.24578 6.60123 6.80828C9.22623 4.37078 12.788 3 16.5 3V7.17715C11.2527 7.17715 6.99847 11.1275 6.99847 16Z" fill="#388FF3" fill-opacity="0.64"/>
+                        <path d="M16.5 17H8.5C8.5 14.88 9.34414 12.8437 10.8423 11.3423C12.3405 9.84092 14.38 9 16.5 9V17Z" fill="#388FF3" fill-opacity="0.48"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_256_1535">
+                            <rect width="16" height="16" rx="8" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                Условия пользования
+            </div>
+            <div class="flex justify-center items-center gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <g clip-path="url(#clip0_256_1535)">
+                        <path d="M-3.5 -4H15.5V0.562022H15.1219C7.19448 0.773098 0.828572 7.60334 0.827301 15.9975H-3.5C-3.5 10.6965 -1.49636 5.60664 2.06435 1.85648C2.49739 1.4004 2.94932 0.96864 3.41821 0.562022H-3.5V-4Z" fill="#388FF3"/>
+                        <path d="M0.827301 15.9975V16L0.829688 15.9975H0.827301Z" fill="#388FF3"/>
+                        <path d="M6.99847 16H2.5C2.5 12.5531 3.97623 9.24578 6.60123 6.80828C9.22623 4.37078 12.788 3 16.5 3V7.17715C11.2527 7.17715 6.99847 11.1275 6.99847 16Z" fill="#388FF3" fill-opacity="0.64"/>
+                        <path d="M16.5 17H8.5C8.5 14.88 9.34414 12.8437 10.8423 11.3423C12.3405 9.84092 14.38 9 16.5 9V17Z" fill="#388FF3" fill-opacity="0.48"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_256_1535">
+                            <rect width="16" height="16" rx="8" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                +998 88 500 50 00
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+<script type="module" src="/main.js"></script>
+<script type="module" src="/js/product.js"></script>
+<script type="module" src="/js/modal.js"></script>
+</body>
+</html>
