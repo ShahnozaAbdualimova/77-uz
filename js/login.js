@@ -1,34 +1,63 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const loginModal = document.getElementById('loginModal');
-    const signupModal = document.getElementById('signupModal');
-    const loginButton = document.querySelector('nav button.flex.items-center'); // Login tugmasini to'g'ri tanlaymiz
-    const openSignupButton = document.getElementById('openSignup');
-    const backToLoginButton = document.getElementById('backToLogin');
+const modals = {
+    login: document.getElementById('loginModal'),
+    signup: document.getElementById('signupModal'),
+    password: document.getElementById('PasswordModal'),
+    location: document.getElementById('ChooseLocation'),
+    lastSign: document.getElementById('lastSignModal')
+};
 
-    // Open login modal
-    loginButton.addEventListener('click', () => {
-        loginModal.classList.remove('hidden');
-    });
+const body = document.body;
+const background = document.getElementById('background')
+const modalContent = document.getElementById('modal-content')
 
-    // Switch to signup modal
-    openSignupButton.addEventListener('click', () => {
-        loginModal.classList.add('hidden');
-        signupModal.classList.remove('hidden');
-    });
 
-    // Switch back to login modal
-    backToLoginButton.addEventListener('click', () => {
-        signupModal.classList.add('hidden');
-        loginModal.classList.remove('hidden');
-    });
 
-    // Close modals when clicking outside
-    window.addEventListener('click', (event) => {
-        if (event.target === loginModal) {
-            loginModal.classList.add('hidden');
-        }
-        if (event.target === signupModal) {
-            signupModal.classList.add('hidden');
-        }
-    });
+
+const openButtons = {
+    signup: document.getElementById('openSignup'),
+    login: document.getElementById('openLogin'),
+    password: document.getElementById('forgetPassword'),
+    location: document.getElementById('openLocModal'),
+    lastSign: document.getElementById('openLastSign'),
+    loginInit: document.getElementById('loginBtn') 
+};
+
+const closeButtons = {
+    login: document.getElementById('closeLoginModal'),
+    signup: document.getElementById('closeSignupModal'),
+    password: document.getElementById('closePassModal'),
+    location: document.getElementById('closeLocModal'),
+    lastSign: document.getElementById('closelastSign')
+};
+
+const backSignModal = document.getElementById('backSignModal');
+
+function openModal(modal) {
+    modal.classList.remove('hidden');
+    body.style.overflow = 'hidden';
+}
+
+function closeModal(modal) {
+    modal.classList.add('hidden');
+    body.style.overflow = 'auto';
+}
+
+function switchModals(modalToClose, modalToOpen) {
+    closeModal(modalToClose);
+    openModal(modalToOpen);
+}
+
+openButtons.signup.addEventListener('click', () => switchModals(modals.login, modals.signup));
+openButtons.login.addEventListener('click', () => switchModals(modals.signup, modals.login));
+openButtons.password.addEventListener('click', () => switchModals(modals.login, modals.password));
+openButtons.location.addEventListener('click', () => switchModals(modals.signup, modals.location));
+openButtons.lastSign.addEventListener('click', () => switchModals(modals.location, modals.lastSign));
+openButtons.loginInit.addEventListener('click', () => openModal(modals.login));
+
+Object.keys(closeButtons).forEach(modalKey => {
+    closeButtons[modalKey].addEventListener('click', () => closeModal(modals[modalKey]));
 });
+
+backSignModal.addEventListener('click', () => switchModals(modals.location, modals.signup));
+
+Object.values(modals).forEach(modal => closeModal(modal));

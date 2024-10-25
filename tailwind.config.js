@@ -1,18 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["index.html", "./js/*.js", "main.js"],
+  content: ["*.html", "./js/*.js", "main.js"],
   theme: {
     extend: {
       display: ['-webkit-box'],
       colors:{
         no: "red",
-        head_bg: "rgba(255, 255, 255, 0.92)",
         mainBlack: "#16191D",
         white: "#fff",
         mainBack: "#F0F3F7",
         primaryText: "#16191D",
         secondaryText: "#8E9297",
-        bgHover: "#388FF3"
+        bgHover: "#388FF3",
+
+        grey:{
+          100: "#63676C",
+          200: "#EAEDF0"
+        }
       },
       boxShadow:{
         '3xl': "0px 12px 36px 0px rgba(14, 17, 22, 0.10)",
@@ -24,7 +28,10 @@ export default {
       border:{
         input: "1px solid #EAEDF0",
         bold: "1px solid #388FF3"
-      }
+      },
+      animation: {
+        skew: 'skewAnimation 0.5s ease-in-out forwards', // Duration and easing
+      },
     },
   },
   plugins: [],

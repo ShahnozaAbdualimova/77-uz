@@ -27,7 +27,8 @@
 <body class="bg-mainBack relative">
 
     <!-- Header -->
-    <header class="border-b border-grey_4 bg-head_bg backdrop-blur-lg w-full px-[30px] h-20 flex ">
+    <header
+        class="border-b border-grey_4 bg-white/[0.92] backdrop-blur-lg w-full px-[30px] max-md:px-4 h-20 max-md:h-14 flex z-30">
         <div class="container mx-auto inline-flex justify-between items-center relative">
             <nav>
                 <ul class="inline-flex gap-x-6 items-center justify-between">
@@ -35,16 +36,12 @@
                         <div class="relative inline-block text-left">
                             <!-- Button -->
                             <button id="languageBtn"
-                                class="inline-flex items-center justify-center px-4 py-2 bg-white text-gray-700 w-[170px] max-sm:w-auto max-[500px]:float-left">
+                                class="inline-flex items-center justify-center px-4  bg-white text-gray-700 w-[170px] max-sm:w-auto max-[500px]:float-left">
                                 <img id="selectedFlag" src="./images/icons/header/uz.svg" alt="Flag"
                                     class="w-5 h-5 mr-2 inline-block">
                                 <span id="selectedLang" class="max-md:hidden block">O'zbekcha</span>
                                 <span id="selectedLang" class="max-md:block hidden">O'z</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none">
-                                    <path d="M16.7998 9.5999L11.9998 14.3999L7.19981 9.5999" stroke="black"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
+                                <img id="arrowIcon" src="images/icons/header/lang.svg" alt="">
                             </button>
 
                             <!-- Dropdown Menu -->
@@ -63,7 +60,6 @@
                                         <img src="./images/icons/header/uz.svg" alt="Uzbek Flag" class="w-5 h-5">
                                         <span class="max-md:hidden block">O'zbekcha</span>
                                         <span class="max-md:block hidden">O'z</span>
-
                                     </a>
                                 </div>
                             </div>
@@ -72,114 +68,69 @@
                     </li>
                     <li>
                         <a href="tel:+998712007007"
-                            class="text-[#16191D] text-sm font-medium inline-flex gap-1 max-lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                                fill="none">
-                                <path
-                                    d="M17.2197 15.6425C17.2197 15.6425 16.2541 16.5908 16.0175 16.8688C15.6321 17.2802 15.1779 17.4744 14.5825 17.4744C14.5253 17.4744 14.4642 17.4744 14.407 17.4706C13.2735 17.3982 12.2202 16.9564 11.4302 16.5794C9.27009 15.5358 7.37333 14.0543 5.79715 12.1766C4.49576 10.6113 3.62561 9.16401 3.04933 7.61009C2.69441 6.66175 2.56465 5.92288 2.6219 5.2259C2.66006 4.78029 2.8318 4.41085 3.14856 4.09474L4.44996 2.796C4.63696 2.6208 4.83542 2.52559 5.03005 2.52559C5.27049 2.52559 5.46513 2.67032 5.58725 2.79219C5.59107 2.796 5.59488 2.79981 5.5987 2.80362C5.8315 3.02071 6.05285 3.24542 6.28565 3.48536C6.40396 3.60724 6.52609 3.72911 6.64821 3.8548L7.6901 4.89455C8.09464 5.29826 8.09464 5.67151 7.6901 6.07522C7.57942 6.18567 7.47256 6.29612 7.36188 6.40276C7.0413 6.7303 7.29314 6.47898 6.96111 6.77605C6.95348 6.78367 6.94584 6.78748 6.94203 6.7951C6.61382 7.12264 6.67488 7.44256 6.74357 7.65965C6.74739 7.67108 6.75121 7.68251 6.75502 7.69393C7.02599 8.34901 7.40763 8.96601 7.98772 9.70107L7.99154 9.70488C9.04487 10.9998 10.1554 12.0091 11.3805 12.7822C11.537 12.8813 11.6973 12.9612 11.8499 13.0374C11.9873 13.106 12.1171 13.1707 12.2278 13.2393C12.243 13.2469 12.2583 13.2583 12.2736 13.2659C12.4033 13.3307 12.5254 13.3612 12.6514 13.3612C12.9681 13.3612 13.1666 13.1631 13.2315 13.0984L13.9795 12.3518C14.1093 12.2223 14.3154 12.0662 14.5558 12.0662C14.7924 12.0662 14.9871 12.2147 15.1054 12.3442C15.1092 12.348 15.1092 12.348 15.113 12.3518L17.2159 14.4504C17.609 14.8388 17.2197 15.6425 17.2197 15.6425Z"
-                                    stroke="#B8BBBD" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
+                            class="text-[#16191D] duration-300 hover:text-blue-500 text-sm font-medium inline-flex gap-1 max-lg:hidden">
+                            <img src="images/icons/header/phone.svg" alt="">
                             +998 71 200 70 07
                         </a>
                     </li>
                 </ul>
             </nav>
             <a href="index.html"
-                class="flex w-[170px] h-[100px] p-[14px_16px]  justify-center items-center rounded-b-[20px] border-x border-b border-grey_4 bg-white shadow-3xl absolute left-[50%] translate-x-[-50%]">
-                <img src="images/images/logo.svg" alt="">
+                class="flex w-[170px] h-[100px] max-md:h-auto max-md:w-auto p-[14px_16px]  justify-center items-center rounded-b-[20px] border-x border-b border-grey_4 bg-white shadow-3xl absolute left-[50%] translate-x-[-50%]">
+                <img class="max-md:w-20" src="images/images/logo.svg" alt="">
             </a>
             <nav>
                 <ul class="inline-flex items-center">
                     <li>
-                        <a href="" class="flex items-center gap-2 text-sm font-semibold text-mainBlack">
+                        <a href="" class="flex items-center gap-2  text-sm font-semibold text-mainBlack">
                             <img src="./images/icons/header/heart.svg" alt="">
-                            <span class="max-md:hidden">Избранные</span>
+                            <span class="max-md:hidden duration-300 hover:text-blue-500">Избранные</span>
                         </a>
                     </li>
-                    <div class="h-8 w-[1px] bg-[#F0F3F7] mx-4"></div>
+                    <div class="h-8 w-[1px] bg-[#F0F3F7] mx-4 max-md:mx-1.5"></div>
                     <li>
-                        <button class="flex items-center justify-center py-2.5 px-6 gap-2 rounded-lg bg-[#F0F3F7]">
+                        <button
+                            class="flex items-center justify-center py-2.5 px-6 gap-2 rounded-lg bg-[#F0F3F7] duration-300 hover:bg-slate-300"
+                            id="loginBtn">
                             <span class="max-md:hidden">Войти</span>
                             <img src="./images/icons/header/login.svg" alt="">
                         </button>
                     </li>
                 </ul>
             </nav>
-            <!-- Login Modal -->
-            <div id="loginModal"
-                class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-20 hidden">
-                <div class="top-3 left-[50%] translate-x-[-50deg] w-full h-full absolute bg-black/50 z-10" id="back">
-                    <div class="bg-white p-6 rounded-md w-96">
-                        <h2 class="text-lg font-bold mb-4">Добро пожаловать!</h2>
-                        <p class="mb-4">Войти в систему чтобы торговать в системе</p>
-                        <form>
-                            <input type="text" placeholder="Логин"
-                                class="w-full mb-3 p-2 border border-gray-300 rounded-md" required>
-                            <input type="password" placeholder="Пароль"
-                                class="w-full mb-3 p-2 border border-gray-300 rounded-md" required>
-                            <button type="submit"
-                                class="w-full bg-blue-500 text-white py-2 rounded-md mb-3">Войти</button>
-                            <button type="button" id="openSignup" class="text-blue-500 w-full">Подать заявку</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Signup Modal -->
-            <div id="signupModal"
-                class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
-                <div class="bg-white p-6 rounded-md w-96">
-                    <h2 class="text-lg font-bold mb-4">Подать заявку</h2>
-                    <form>
-                        <input type="text" placeholder="Ф.И.О."
-                            class="w-full mb-3 p-2 border border-gray-300 rounded-md" required>
-                        <input type="text" placeholder="Название продукта"
-                            class="w-full mb-3 p-2 border border-gray-300 rounded-md" required>
-                        <select class="w-full mb-3 p-2 border border-gray-300 rounded-md" required>
-                            <option value="">Выберите категорию</option>
-                            <option value="Электроника">Электроника</option>
-                            <option value="Одежда">Одежда</option>
-                            <!-- Add more categories as needed -->
-                        </select>
-                        <input type="tel" placeholder="Телефон"
-                            class="w-full mb-3 p-2 border border-gray-300 rounded-md" required>
-                        <button type="submit"
-                            class="w-full bg-blue-500 text-white py-2 rounded-md mb-3">Продолжить</button>
-                        <button type="button" id="backToLogin" class="text-blue-500 w-full">Войти</button>
-                    </form>
-                </div>
-            </div>
-
         </div>
     </header>
 
     <main>
         <section class="bg-white text-center pb-10 mx-auto mt-24 max-w-[1379px] max-2xl:w-full">
             <div class="container bg-white mx-auto">
-                <div class="modal" id="modal">
-                    <form
-                        class="flex  mx-auto w-[580px] h-[60px] max-md:w-10/12 justify-between items-center rounded-lg border border-inputCard gap-2 relative -top-[35px] bg-white p-2 group z-20">
-                        <label for="search" class="flex gap-2 w-full">
-                            <img src="images/icons/main/search.svg" alt="search_icon" class="cursor-pointer">
-                            <input type="search" name="search" id="search" placeholder="Что вы ищите?"
-                                class="focus:outline-0 w-full">
-                        </label>
-                        <button
-                            class="inline-flex h-11 py-3 px-7 justify-center items-center gap-2 rounded-md bg-primaryText text-white ">
-                            Поиск
-                        </button>
-                    </form>
-                    <!-- Modal -->
-                    <h2 class="text-primaryText text-[32px] font-extrabold leading-[130%] text-center">Категории</h2>
-                    <p class="text-secondaryText text-base font-normal text-center mt-2">Вы можете найти все категории,
-                        которые
-                        вам нужны от покупателя</p>
-                </div>
-                <!--   Cards   -->
-                <div class="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-x-[72px] max-sm:px-4 max-sm:pl-8 gap-y-5 mt-10 pl-6"
-                    id="categories">
+                <form
+                    class="relative z-30 flex mx-auto w-[580px] h-[60px] max-md:w-10/12 justify-between items-center rounded-lg border border-inputCard gap-2 bg-white p-2 group -translate-y-1/2">
+                    <label for="search" class="flex gap-2 w-full">
+                        <img src="images/icons/main/search.svg" alt="search_icon" class="cursor-pointer">
+                        <input type="search" name="search" id="search" placeholder="Что вы ищите?"
+                            class="focus:outline-0 w-full">
+                    </label>
+                    <button
+                        class="inline-flex h-11 py-3 px-7 justify-center items-center gap-2 rounded-md bg-primaryText text-white ">
+                        Поиск
+                    </button>
+                </form>
 
+                <!-- Modal -->
+                <div id="modal" class="fixed top-0 left-0 w-full h-full bg-black/50 z-20 hidden"></div>
+                <div class="container inline w-[1320px] mx-auto justify-center text-center pt-6">
+                    <h1 class="text-4xl font-bold pt-6">Категории</h1>
+                    <p class="font-inter text-base font-normal text-[#b8bbbd] mt-2">
+                        Вы можете найти все категории, которые вам нужны от покупателя
+                    </p>
+
+                    <div data-section="main"
+                        class="categories py-10 bg-white text-center container mx-auto grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-x-[72px] gap-y-5 pl-8">
+                        <div
+                            class="subcategories-dropdown hidden col-span-3 max-md:col-span-2 max-sm:col-span-1 rounded-xl border border-grey-4 bg-white p-5 grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-x-6 gap-y-3 -translate-x-8 w-[calc(100%+32px)]">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -199,16 +150,10 @@
                 <button
                     class="flex py-3 px-7 justify-center items-center mx-auto w-[260px] mt-10 overflow-hidden btn group">Загрузить
                     больше
-                    <svg class="relative ml-5 -top-14 group-hover:top-0 transition-all duration-300"
-                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 21 21" fill="none">
-                        <path d="M14.5 11.5L10.5 15.5L6.5 11.5M14.5 5.5L10.5 9.5L6.5 5.5" stroke="#16191D"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <svg class="relative -ml-5 group-hover:translate-y-8 transition-all duration-200"
-                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 21 21" fill="none">
-                        <path d="M14.5 11.5L10.5 15.5L6.5 11.5M14.5 5.5L10.5 9.5L6.5 5.5" stroke="#16191D"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                    <img class="relative ml-5 -top-14 group-hover:top-0 transition-all duration-300"
+                        src="images/icons/main/btn1.svg" alt="">
+                    <img class="relative -ml-5 group-hover:translate-y-8 transition-all duration-200"
+                        src="images/icons/main/btn1.svg" alt="">
                 </button>
             </div>
         </section>
@@ -216,84 +161,246 @@
 
     <footer class="h-[203px] mt-[72px]">
         <div class="container mx-auto">
-            <img class="relative cursor-pointer left-[50%] translate-x-[-50%] -top-14 bottom-0"
-                src="images/images/footer/logo.svg" alt="">
-            <p
-                class="text-black text-center text-base max-md:text-sm max-md:w-5/12 max-md:line-clamp-4 -mt-16 w-2/3 mx-auto">
-                77.uz marketplace - это виртуальная платформа в Узбекистане, которая облегчает покупки и продажи,
-                связывая продавцов с потенциальными клиентами. </p>
+            <div>
+                <img class="cursor-pointer ml-[50%] translate-x-[-50%] translate-y-[-50%]"
+                    src="images/images/footer/logo.svg" alt="">
+            </div>
 
-            <div class="flex justify-center flex-nowrap max-md:flex-wrap items-center mt-5 gap-[72px] w-full">
-                <div class="flex justify-center items-center gap-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <g clip-path="url(#clip0_256_1535)">
-                            <path
-                                d="M-3.5 -4H15.5V0.562022H15.1219C7.19448 0.773098 0.828572 7.60334 0.827301 15.9975H-3.5C-3.5 10.6965 -1.49636 5.60664 2.06435 1.85648C2.49739 1.4004 2.94932 0.96864 3.41821 0.562022H-3.5V-4Z"
-                                fill="#388FF3" />
-                            <path d="M0.827301 15.9975V16L0.829688 15.9975H0.827301Z" fill="#388FF3" />
-                            <path
-                                d="M6.99847 16H2.5C2.5 12.5531 3.97623 9.24578 6.60123 6.80828C9.22623 4.37078 12.788 3 16.5 3V7.17715C11.2527 7.17715 6.99847 11.1275 6.99847 16Z"
-                                fill="#388FF3" fill-opacity="0.64" />
-                            <path
-                                d="M16.5 17H8.5C8.5 14.88 9.34414 12.8437 10.8423 11.3423C12.3405 9.84092 14.38 9 16.5 9V17Z"
-                                fill="#388FF3" fill-opacity="0.48" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_256_1535">
-                                <rect width="16" height="16" rx="8" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    Доска объявлений
+            <p
+                class="text-black text-center text-base max-md:text-sm max-md:w-5/12 max-md:line-clamp-4  w-2/3 mx-auto -translate-y-20">
+                77.uz marketplace - это виртуальная платформа в Узбекистане, которая облегчает покупки и продажи,
+                связывая продавцов с потенциальными клиентами.
+            </p>
+            <div class="flex justify-center gap-x-20">
+                <div class="flex gap-1">
+                    <img src="images/images/footer/symbol.svg" alt="">
+                    <p>Доска объявлений</p>
                 </div>
-                <div class="flex justify-center items-center gap-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <g clip-path="url(#clip0_256_1535)">
-                            <path
-                                d="M-3.5 -4H15.5V0.562022H15.1219C7.19448 0.773098 0.828572 7.60334 0.827301 15.9975H-3.5C-3.5 10.6965 -1.49636 5.60664 2.06435 1.85648C2.49739 1.4004 2.94932 0.96864 3.41821 0.562022H-3.5V-4Z"
-                                fill="#388FF3" />
-                            <path d="M0.827301 15.9975V16L0.829688 15.9975H0.827301Z" fill="#388FF3" />
-                            <path
-                                d="M6.99847 16H2.5C2.5 12.5531 3.97623 9.24578 6.60123 6.80828C9.22623 4.37078 12.788 3 16.5 3V7.17715C11.2527 7.17715 6.99847 11.1275 6.99847 16Z"
-                                fill="#388FF3" fill-opacity="0.64" />
-                            <path
-                                d="M16.5 17H8.5C8.5 14.88 9.34414 12.8437 10.8423 11.3423C12.3405 9.84092 14.38 9 16.5 9V17Z"
-                                fill="#388FF3" fill-opacity="0.48" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_256_1535">
-                                <rect width="16" height="16" rx="8" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    Условия пользования
+                <div class="flex gap-1">
+                    <img src="images/images/footer/symbol.svg" alt="">
+                    <p>Условия пользования</p>
                 </div>
-                <div class="flex justify-center items-center gap-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <g clip-path="url(#clip0_256_1535)">
-                            <path
-                                d="M-3.5 -4H15.5V0.562022H15.1219C7.19448 0.773098 0.828572 7.60334 0.827301 15.9975H-3.5C-3.5 10.6965 -1.49636 5.60664 2.06435 1.85648C2.49739 1.4004 2.94932 0.96864 3.41821 0.562022H-3.5V-4Z"
-                                fill="#388FF3" />
-                            <path d="M0.827301 15.9975V16L0.829688 15.9975H0.827301Z" fill="#388FF3" />
-                            <path
-                                d="M6.99847 16H2.5C2.5 12.5531 3.97623 9.24578 6.60123 6.80828C9.22623 4.37078 12.788 3 16.5 3V7.17715C11.2527 7.17715 6.99847 11.1275 6.99847 16Z"
-                                fill="#388FF3" fill-opacity="0.64" />
-                            <path
-                                d="M16.5 17H8.5C8.5 14.88 9.34414 12.8437 10.8423 11.3423C12.3405 9.84092 14.38 9 16.5 9V17Z"
-                                fill="#388FF3" fill-opacity="0.48" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_256_1535">
-                                <rect width="16" height="16" rx="8" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    +998 88 500 50 00
+                <div class="flex gap-1">
+                    <img src="images/images/footer/symbol.svg" alt="">
+                    <p>+998 88 500 50 00</p>
                 </div>
             </div>
 
+            <div class="bg-white border-t border-stone-300 w-full mt-12 flex justify-between items-center py-4">
+                <div class="flex">
+                    <span>© 77.uz</span>
+                    <span> 2023. Все права защищены</span>
+                </div>
+                <img src="images/images/footer/UIC.svg" alt="">
+            </div>
         </div>
     </footer>
+
+    <!-- MODALS -->
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal hidden">
+            <div class="top-0 left-0 w-full h-screen bg-black/50 z-40" id="background">
+                <div
+                    class="bg-white rounded-2xl p-5 w-[400px] relative top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%] z-30" id="modal-content">
+                    <div class="flex justify-between">
+                        <h2 class="text-mainBlack text-2xl font-bold leading-8">Добро пожаловать!</h2>
+                        <svg id="closeLoginModal" class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <p class="text-secondaryText text-sm font-medium leading-5 mt-2">Войти в систему чтобы торговать
+                        в системе</p>
+                    <form id="loginForm" class="mt-7" name="frm">
+                        <label for="login" class="text-grey-100 text-sm font-medium leading-5">Логин</label>
+                        <input
+                            class="w-full rounded-lg bg-[#F0F3F7] mt-2 mb-4 p-3 focus:outline-bgHover required:outline-red-700"
+                            type="text" id="login" name="login" placeholder="Введите логин" required>
+
+                        <label for="password" class="text-grey-100 text-sm font-medium leading-5">Пароль</label>
+                        <input type="password" name="login"
+                            class="w-full my-2 rounded-lg bg-[#F0F3F7] p-3 focus:outline-bgHover required:outline-red-700"
+                            id="password" placeholder="Введите пароль" required>
+                        <a href="#" class="text-bgHover text-xs leading-4 font-normal" id="forgetPassword">Забыли
+                            пароль?</a>
+                        <button type="submit" onclick="return IsEmpty();"
+                            class="mt-16 bg-bgHover text-white py-3 w-full rounded-lg">Войти</button>
+
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="h-[1px] w-3/12 bg-secondaryText"></span>
+                            <span class="text-secondaryText text-xs leading-4 ">Хотите стать продавцом?</span>
+                            <span class="h-[1px] w-3/12 bg-secondaryText"></span>
+                        </div>
+                    </form>
+                    <button id="openSignup" class="mt-3 border border-bgHover text-bgHover py-3 w-full rounded-lg">Подать
+                        заявку</button>
+                </div>
+            </div>
+    </div>
+
+    <!-- Forget Password Modal -->
+    <div id="PasswordModal" class="modal hidden">
+        <div class="top-0 left-0 w-full h-screen bg-black/50 z-40">
+            <div
+                class="bg-white rounded-2xl p-5 w-[400px] relative top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%] z-30">
+                <div class="float-right">
+                    <svg id="closePassModal" class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="flex mt-12 h-16 w-16px ml-36">
+                    <span
+                        class="animate-ping absolute inline-flex h-16 w-16 rounded-full border-2 border-yellow-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-16 w-16 bg-yellow-500 justify-center items-center">
+                        <img src="/images/images/information-circle.svg" alt="">
+                    </span>
+                </div>
+                <p class="text-secondaryText text-center text-sm leading mt-6">Забыли пароль? Для восстановления
+                    пароля обратитесь администратору</p>
+                <a href="tel:+998974504500"
+                    class="flex justify-center items-center rounded-lg px-7 py-3 mx-auto bg-bgHover mt-5 text-white">
+                    <img src="/images/icons/header/phone.svg" alt="" class="stroke-white">
+                    +998 97 450 45 00
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Signup Modal -->
+
+
+    <div id="signupModal" class="modal hidden">
+        <div class="top-0 left-0 w-full h-screen bg-black/50 z-40 relative overflow-y-auto">
+            <div
+                class="bg-white p-5 w-[400px] h-auto rounded-2xl  absolute top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%] z-30">
+                <div class="flex justify-between">
+                    <h2 class="text-mainBlack text-2xl font-bold leading-8">Подать заявку</h2>
+                    <svg id="closeSignupModal" class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <p class="text-secondaryText text-sm font-medium leading-5 mt-2">Войти в систему чтобы
+                    торговать
+                    в системе</p>
+
+                <form id="signupForm" class="mt-4">
+                    <label for="fullName" class="text-grey-100 text-sm font-medium leading-5">Ф.И.О.</label>
+                    <input
+                        class="w-full rounded-lg bg-[#F0F3F7] mt-1.5 mb-2.5 p-3 focus:outline-bgHover required:outline-red-700"
+                        type="text" id="fullName" placeholder="Введите вашу Ф.И.О.">
+
+                    <label for="productName" class="text-grey-100 text-sm font-medium leading-5">Название
+                        продукта</label>
+                    <input type="text"
+                        class="w-full rounded-lg bg-[#F0F3F7] mt-1.5 mb-2.5 p-3 focus:outline-bgHover required:outline-red-700"
+                        id="productName" placeholder="Введите название продукта">
+
+                    <label class="text-grey-100 text-sm font-medium leading-5" for="category">Категория</label>
+                    <select id="category"
+                        class="w-full rounded-lg bg-[#F0F3F7] mt-1.5 mb-2.5 p-3 focus:outline-bgHover required:outline-red-700">
+                        <option value="">Выберите категорию</option>
+                        <!-- Categories go here -->
+                    </select>
+
+                    <label for="phone" class="text-grey-100 text-sm font-medium leading-5">Телефон
+                        номер</label>
+                    <input type="tel" id="phone" value="+998" placeholder="+998 (___) ___ __ __"
+                        class="w-full rounded-lg bg-[#F0F3F7] mt-1.5 mb-2.5 p-3 focus:outline-bgHover required:outline-red-700">
+                    <label class="text-grey-100 text-sm font-medium leading-5" for="category">Категория</label>
+                    <select id="category"
+                        class="w-full rounded-lg bg-[#F0F3F7] mt-1.5 mb-2.5 p-3 focus:outline-bgHover required:outline-red-700">
+                        <option value="">Выберите свой адрес</option>
+                        <!-- Categories go here -->
+                    </select>
+                    <button class="bg-bgHover text-white py-3 w-full rounded-lg" type="button"
+                        id="openLocModal">Продолжить</button>
+
+                    <div class="flex justify-between items-center mt-2.5">
+                        <span class="h-[1px] w-[15%] bg-secondaryText"></span>
+                        <span class="text-secondaryText text-xs leading-4 ">Если вы продавец, войдите на
+                            платформу</span>
+                        <span class="h-[1px] w-[15%] bg-secondaryText"></span>
+                    </div>
+                    <button class="mt-2.5 border border-bgHover text-bgHover py-3 w-full rounded-lg"
+                        id="openLogin">Войти</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- choose map location -->
+    <div id="ChooseLocation" class="modal hidden">
+        <div class="top-0 left-0 w-full h-screen bg-black/50 z-40">
+            <div
+                class="bg-white rounded-2xl p-5 w-[400px] relative top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%] z-30">
+                <div class="flex justify-between items-center">
+                    <span class="flex items-center justify-between gap-2">
+                        <img class="cursor-pointer" id="backSignModal" src="/images/images/back-arrow.svg" alt="">
+                        <h3 class="text-mainBlack text-2xl font-bold leading-8">Введите адресс</h3>
+                    </span>
+                    <svg id="closeLocModal" class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <p class="text-secondaryText text-sm font-medium mt-2 leading-4">Войти в систему чтобы торговать
+                    в системе</p>
+                <p class="text-sm font-medium leading-5 text-grey-100 mt-6">Адресс</p>
+                <form>
+                    <input
+                        class="w-full rounded-lg bg-[#F0F3F7] mt-1.5 mb-2.5 p-3 focus:outline-bgHover required:outline-red-700"
+                        type="text" placeholder="Введите свой адрес">
+                </form>
+                <iframe class="w-full h-80 rounded-lg"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.6359512387976!2d69.33195507514921!3d41.338528999025684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef48a8ed4d0e9%3A0x3772abeffc72e7b8!2z0KPQvdC40LLQtdGA0YHQuNGC0LXRgiDQmNC90YXQsA!5e0!3m2!1sru!2s!4v1729577484686!5m2!1sru!2s"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <button id="openLastSign"
+                    class="w-full h-11 mt-8 py-3 px-7 bg-bgHover rounded-lg text-white text-base leading-5 font-semibold">Подать
+                    заявку</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Last  Sign -->
+
+    <div id="lastSignModal" class="modal hidden">
+        <div class="top-0 left-0 w-full h-screen bg-black/50 z-40">
+            <div
+                class="bg-white rounded-2xl p-5 w-[400px] relative top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%] z-30">
+                <div class="float-right">
+                    <svg id="closelastSign" class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M6 6L18 18" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <img class="mt-4 mx-auto" src="/images/images/lastSignModal.svg" alt="">
+                <h3 class="text-center text-lg leading-6 font-semibold mt-5">Ваша заявка принята!</h3>
+                <p class="mt-2 text-secondaryText text-center text-sm leading-5 mx-auto w-9/12">Наши сотрудники
+                    свяжутся с вами в ближайшее время</p>
+                <button class="w-full h-11 mt-12 py-3 px-7 bg-bgHover rounded-lg flex items-center justify-center"
+                    type="submit"><a class="text-white text-base leading-5 font-semibold"
+                        href="index.html">Спасибо</a></button>
+            </div>
+        </div>
+    </div>
 
     <script type="module" src="/js/login.js"></script>
     <script type="module" src="/js/main.js"></script>
