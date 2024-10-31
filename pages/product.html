@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Single Page</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="/images/images/favicon/+page.svg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-grey-300">
+  <main>
+    <section class="mt-16 pb-5 mx-auto max-w-[1379px] max-2xl:w-full">
+      <div class="container mx-auto">
+        <div class="inline-flex justify-center items-center gap-2 max-lg:hidden">
+          <a href="/index.html" class="text-black-100 text-sm font-medium leading-5">Главная</a>
+          <svg xmlns="http://www.w3.org/2000/svg" width="4" height="4" viewBox="0 0 4 4" fill="none">
+            <circle cx="2" cy="2" r="2" fill="#D5D8DB" />
+          </svg>
+          <p class="text-sm font-medium leading-5 text-grey-100">
+            Результаты поиска
+          </p>
+        </div>
+
+        <div class="flex justify-between items-start gap-4 mt-8">
+          <div class="bg-white/[40%] w-3/12 rounded-xl p-4 max-lg:hidden">
+            <!-- Filter Title -->
+            <h3 class="text-black-100 font-semibold text-xl leading-7">
+              Фильтр
+            </h3>
+
+            <!-- Region Selection -->
+            <p class="text-grey-400 text-sm font-medium leading-5 mt-4">
+              Регион
+            </p>
+            <!-- region -->
+            <div
+              class="flex w-full h-11 pr-3 p-2.5 mt-2 justify-between items-center gap-8 border border-grey-200 rounded-lg">
+              <p class="text-sm text-black-100 leading-5" id="region-name">
+                Enter Region
+              </p>
+              <img class="disabled:cursor-wait hover:cursor-pointer" id="region-btn"
+                src="/images/icons/main/chevron-right.svg" alt="" />
+            </div>
+            <div
+              class="hidden w-full mt-2 pl-4 h-80 overflow-y-auto flex-col justify-end items-end bg-white rounded-2xl shadow-2xl"
+              id="region-content">
+              <!-- items -->
+            </div>
+
+            <!-- region/city -->
+            <!-- Region Selection -->
+            <p class="text-grey-400 text-sm font-medium leading-5 mt-4">
+              Район/город
+            </p>
+            <div
+              class="flex w-full h-11 mt-4 pr-3 p-2.5 justify-between items-center gap-8 border border-grey-200 rounded-lg">
+              <p class="text-sm text-black-100 leading-5" id="city-name">
+                Enter Region/City
+              </p>
+              <img class="cursor-pointer" id="city-btn" src="/images/icons/main/chevron-right.svg" alt="" />
+            </div>
+            <div
+              class="hidden w-full mt-2 pl-4 h-80 overflow-y-auto flex-col justify-end items-end bg-white rounded-2xl shadow-2xl"
+              id="city-content">
+              <!-- items -->
+            </div>
+
+            <p class="text-grey-400 text-sm font-medium leading-5 mt-4">
+              Сортировать
+            </p>
+            <div
+              class="flex flex-col w-full mt-4 pr-3 p-2.5 justify-between items-center gap-4 rounded-lg">
+              <div class="w-full flex gap-2 items-center">
+                <input class="w-6 h-6" type="radio" name="first" id="first">
+                <label class="text-black-100 font-medium leading-5 text-sm cursor-pointer border-b border-grey-50 w-full pb-2.5" for="first">Дешёвые сперва</label>
+              </div>
+              <div class="w-full flex gap-2 items-center">
+                <input class="w-6 h-6 border border-grey-50" type="radio" name="second" id="second">
+                <label class="text-black-100 font-medium leading-5 text-sm cursor-pointer border-b border-grey-50 w-full pb-2.5" for="second">Дорогие сперва</label>
+              </div>
+              <div class="w-full flex gap-2 items-center">
+                <input class="w-6 h-6 border border-grey-50" type="radio" name="third" id="third">
+                <label class="text-black-100 font-medium leading-5 text-sm cursor-pointer border-b border-grey-50 w-full pb-2.5" for="third">Новые сперва</label>
+              </div>
+            </div>
+  
+            <div class="mt-6">
+              <p class="text-grey-400 text-sm font-medium leading-5">
+                Парфюмерия
+              </p>
+              <div class="mt-2">
+                <label class="flex items-center space-x-2">
+                  <input type="checkbox" class="form-checkbox h-4 w-4 text-mainBlue" />
+                  <span>Духи</span>
+                </label>
+                <label class="flex items-center space-x-2 mt-2">
+                  <input type="checkbox" class="form-checkbox h-4 w-4 text-mainBlue" />
+                  <span>Дезодорант</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Other categories -->
+            <div class="mt-6">
+              <p class="text-grey-400 text-sm font-medium leading-5">
+                Волосы
+              </p>
+              <button
+                class="rounded-lg w-full flex justify-between items-center py-2.5 px-3 border border-grey-200 bg-white"
+                onclick="toggleDropdown('hairDropdown')">
+                Выбрать
+                <img src="/images/images/icons/main/chevron-right.svg" alt="" />
+              </button>
+              <div id="hairDropdown" class="hidden mt-2">
+                <ul class="bg-white border border-gray-200 rounded-lg p-2">
+                  <li class="py-1"><a href="#">Шампунь</a></li>
+                  <li class="py-1"><a href="#">Бальзам</a></li>
+                  <!-- Add other options -->
+                </ul>
+              </div>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="mt-6 w-full bg-blue-500 text-white py-2 rounded-lg">
+              Применить фильтр
+            </button>
+          </div>
+          <div class="w-9/12 max-lg:w-full">
+            <h2 class="text-3xl text-black-100 font-semibold leading-10 ml-4">
+              Ноутбуки и планшеты
+            </h2>
+            <div class="flex justify-between item-center p-4">
+              <p class="text-grey-400 text-sm font-medium leading-5 self-center">
+                156 объявлений
+              </p>
+              <div class="flex justify-center items-center gap-2">
+                <img id="filter-btn" class="md:hidden bg-white p-1.5 cursor-pointer" src="/images/icons/main/filter.svg"
+                  alt="" />
+                <img id="button1" src="/images/icons/main/list.svg" alt="" />
+                <img id="button2" src="/images/icons/main/grid.svg" alt="" />
+              </div>
+            </div>
+            <div class="grid grid-cols-3 max-md:px-4 max-md:grid-cols-2 gap-x-6 gap-y-5 mt-4 pl-6 max-md:mt-4"
+              id="products"></div>
+            <div class="w-full flex justify-end">
+              <div id="pagination" class="flex gap-2 mt-4 max-md:pr-4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- filter modal -->
+  <div id="filterModal" class="modal hidden">
+    <div class="top-0 left-0 w-full h-screen bg-black-50 z-40" id="close-filter">
+      <div
+        class="bg-white rounded-2xl p-5 w-[400px] max-md:w-10/12 relative top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%] z-30">
+        <div class="bg-white/[40%] w-3/12 rounded-xl p-4 max-lg:hidden">
+            <!-- Filter Title -->
+            <h3 class="text-black-100 font-semibold text-xl leading-7">
+              Фильтр
+            </h3>
+
+            <!-- Region Selection -->
+            <p class="text-grey-400 text-sm font-medium leading-5 mt-4">
+              Регион
+            </p>
+            <!-- region -->
+            <div
+              class="flex w-full h-11 pr-3 p-2.5 mt-2 justify-between items-center gap-8 border border-grey-200 rounded-lg">
+              <p class="text-sm text-black-100 leading-5" id="region-name">
+                Enter Region
+              </p>
+              <img class="disabled:cursor-wait hover:cursor-pointer" id="region-btn"
+                src="/images/icons/main/chevron-right.svg" alt="" />
+            </div>
+            <div
+              class="hidden w-full mt-2 pl-4 h-80 overflow-y-auto flex-col justify-end items-end bg-white rounded-2xl shadow-2xl"
+              id="region-content">
+              <!-- items -->
+            </div>
+
+            <!-- region/city -->
+            <!-- Region Selection -->
+            <p class="text-grey-400 text-sm font-medium leading-5 mt-4">
+              Район/город
+            </p>
+            <div
+              class="flex w-full h-11 mt-4 pr-3 p-2.5 justify-between items-center gap-8 border border-grey-200 rounded-lg">
+              <p class="text-sm text-black-100 leading-5" id="city-name">
+                Enter Region/City
+              </p>
+              <img class="cursor-pointer" id="city-btn" src="/images/icons/main/chevron-right.svg" alt="" />
+            </div>
+            <div
+              class="hidden w-full mt-2 pl-4 h-80 overflow-y-auto flex-col justify-end items-end bg-white rounded-2xl shadow-2xl"
+              id="city-content">
+              <!-- items -->
+            </div>
+
+            <p class="text-grey-400 text-sm font-medium leading-5 mt-4">
+              Сортировать
+            </p>
+            <div
+              class="flex flex-col w-full mt-4 pr-3 p-2.5 justify-between items-center gap-4 rounded-lg">
+              <div class="w-full flex gap-2 items-center">
+                <input class="w-6 h-6" type="radio" name="first" id="first">
+                <label class="text-black-100 font-medium leading-5 text-sm cursor-pointer border-b border-grey-50 w-full pb-2.5" for="first">Дешёвые сперва</label>
+              </div>
+              <div class="w-full flex gap-2 items-center">
+                <input class="w-6 h-6 border border-grey-50" type="radio" name="second" id="second">
+                <label class="text-black-100 font-medium leading-5 text-sm cursor-pointer border-b border-grey-50 w-full pb-2.5" for="second">Дорогие сперва</label>
+              </div>
+              <div class="w-full flex gap-2 items-center">
+                <input class="w-6 h-6 border border-grey-50" type="radio" name="third" id="third">
+                <label class="text-black-100 font-medium leading-5 text-sm cursor-pointer border-b border-grey-50 w-full pb-2.5" for="third">Новые сперва</label>
+              </div>
+            </div>
+  
+            <div class="mt-6">
+              <p class="text-grey-400 text-sm font-medium leading-5">
+                Парфюмерия
+              </p>
+              <div class="mt-2">
+                <label class="flex items-center space-x-2">
+                  <input type="checkbox" class="form-checkbox h-4 w-4 text-mainBlue" />
+                  <span>Духи</span>
+                </label>
+                <label class="flex items-center space-x-2 mt-2">
+                  <input type="checkbox" class="form-checkbox h-4 w-4 text-mainBlue" />
+                  <span>Дезодорант</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Other categories -->
+            <div class="mt-6">
+              <p class="text-grey-400 text-sm font-medium leading-5">
+                Волосы
+              </p>
+              <button
+                class="rounded-lg w-full flex justify-between items-center py-2.5 px-3 border border-grey-200 bg-white"
+                onclick="toggleDropdown('hairDropdown')">
+                Выбрать
+                <img src="/images/images/icons/main/chevron-right.svg" alt="" />
+              </button>
+              <div id="hairDropdown" class="hidden mt-2">
+                <ul class="bg-white border border-gray-200 rounded-lg p-2">
+                  <li class="py-1"><a href="#">Шампунь</a></li>
+                  <li class="py-1"><a href="#">Бальзам</a></li>
+                  <!-- Add other options -->
+                </ul>
+              </div>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="mt-6 w-full bg-blue-500 text-white py-2 rounded-lg">
+              Применить фильтр
+            </button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="../js/layoutTemplates.js"></script>
+  <script type="module" src="../js/product.js"></script>
+  <script type="module" src="../js/login.js"></script>
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/filter.js"></script>
+  <script type="module" src="../js/layoutFooter.js"></script>
+</body>
+
+</html>

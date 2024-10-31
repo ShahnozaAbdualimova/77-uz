@@ -15,8 +15,8 @@ const modalItems = [
 
 function createModalContent(searchText = "") {
   let modalContent = `
-        <div class="top-0 left-0 w-full h-full absolute bg-black/50 z-10" id="back">
-            <div class="w-[580px] h-80 pt-4 bg-white relative top-[33%] left-[50%] -translate-x-[50%] rounded-xl overflow-y-scroll">
+        <div class="top-0 left-0 w-full h-full absolute bg-black-50 z-10" id="back">
+            <div class="w-[580px] max-md:w-10/12 h-80 pt-4 max-md:top-[28%] bg-white relative top-[30%] left-[50%] -translate-x-[50%] rounded-xl overflow-y-scroll">
                 <p class="text-left text-sm text-[#8E9297] font-medium pl-3 pb-2">История поиска</p>
     `;
 
